@@ -1,0 +1,48 @@
+.loading-bar {
+  width: 100%;
+  max-width: 400px;
+  height: 24px;
+  background: rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.loading-text {
+  position: static; /* Remove absolute positioning */
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.progress {
+  animation: loading 4s linear forwards;
+  background: linear-gradient(90deg, #888, #ccc, #888); /* Grey gradient */
+}
+
+.loadingBarContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000; /* Black background */
+}
+
+/* You can add more styles for .loadingBar and .loadingMessage here */
